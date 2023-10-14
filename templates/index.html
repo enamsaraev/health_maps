@@ -1,0 +1,31 @@
+{% load static %}
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>AIProsto</title>
+</head>
+<body>
+    <div>
+        <div>
+            <p data-item='AI-PROSTO'>AI-PROSTO</p>
+
+            <section>
+            <div>Выберите город, чтобы посмотреть данные</div>
+            <nav>
+                <ul class="menuItems">
+                <li><a href="{% url 'main:ekb' %}" data-item='Екатеринбург'>Екатеринбург</a></li>
+                <li><a href="{% url 'main:tula' %}" data-item='Тула'>Тула</a></li>
+                </ul>
+            </nav>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
